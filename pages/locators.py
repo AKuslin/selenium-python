@@ -4,8 +4,8 @@ class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 class LoginPageLocators():
-    LOGIN_FORM = (By.ID, "login_form1")
-    REG_FORM = (By.ID, "register_form1")
+    LOGIN_FORM = (By.ID, "login_form")
+    REG_FORM = (By.ID, "register_form")
     EMAIL_LOGIN = (By.NAME, "login-username")
     PASSWORD_LOGIN = (By.NAME, "login-password")
     EMAIL_REG = (By.NAME, "registration-email")
