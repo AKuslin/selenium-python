@@ -9,11 +9,23 @@ class ProductPage(BasePage):
         add_to_basket = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET)
         add_to_basket.click()
 
-    def should_be_product_page(self):
-        self.should_be_add_to_basket()
-        self.should_be_product_page_url()
+    def should_be_product_add_to_basket(self):
+        self.should_be_add_to_basket_button()
+    #    self.should_be_product_page_url()
+        self.should_be_product_name()
+        self.should_be_product_price()
 
-    def should_be_add_to_basket(self):
+    def should_be_product_name(self):
+        product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
+        product_name_notification = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME_NOTIFICATION).text
+        assert product_name == product_name_notification, f"{product_name} != {product_name_notification}"
+
+    def should_be_product_price(self):
+        product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
+        product_price_notification = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE_NOTIFICATION).text
+        assert product_price == product_price_notification, f"{product_price} != {product_price_notification}"
+
+    def should_be_add_to_basket_button(self):
         assert self.is_element_present(*ProductPageLocators.ADD_TO_BASKET), "'add to basket' button is not presented"
 
     def should_be_product_page_url(self):

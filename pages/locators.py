@@ -16,3 +16,6 @@ class ProductPageLocators():
     ADD_TO_BASKET = (By.XPATH, "//button[text()='Add to basket']")
     BASKET_TOTAL = (By.XPATH, "//*[@id='default']/header/div[1]/div/div[2]")
     PRODUCT_PRICE = (By.CSS_SELECTOR, "p.price_color")
+    PRODUCT_NAME = (By.XPATH, "//div[@class='col-sm-6 product_main']/h1")
+    PRODUCT_NAME_NOTIFICATION = (By.XPATH, "(//div[@class='alertinner ']/strong)[1]")
+    PRODUCT_PRICE_NOTIFICATION = (By.XPATH, "(//div[@class='alertinner ']//strong)[3]")
