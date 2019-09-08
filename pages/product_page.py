@@ -19,6 +19,11 @@ class ProductPage(BasePage):
     def should_be_product_page_url(self):
         assert self.browser.current_url == "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-shellcoders-handbook_209/?promo=newYear", "Wrong URL"
 
+    def should_be_price_equally_basket_total(self):
+        product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
+        basket_total = self.browser.find_element(*ProductPageLocators.BASKET_TOTAL).text
+        assert product_price in basket_total, f"{product_price} != {basket_total}"
+
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
         x = alert.text.split(" ")[2]

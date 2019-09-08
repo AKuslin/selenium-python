@@ -9,3 +9,4 @@ def test_guest_should_click_add_to_basket(browser):
     page.should_be_product_page()
     page.click_add_to_basket()
     page.solve_quiz_and_get_code()
+    page.should_be_price_equally_basket_total()
