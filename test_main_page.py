@@ -3,7 +3,6 @@ from pages.login_page import LoginPage
 import time
 
 link = "http://selenium1py.pythonanywhere.com/"
-link1 = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"
 
 def test_guest_can_go_to_login_page(browser):
     # инициализируем Page Object, передаем в конструктор экземпляр драйвера и урл
