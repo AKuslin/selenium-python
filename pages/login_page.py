@@ -9,7 +9,7 @@ class LoginPage(BasePage):
 
     def should_be_login_url(self):
         # реализуйте проверку на корректный url адрес
-        assert self.browser.current_url == "http://selenium1py.pythonanywhere.com/en-gb/accounts/login/"
+        assert self.browser.current_url == "http://selenium1py.pythonanywhere.com/en-gb/accounts/login/", "Wrong URL"
 
     def should_be_login_form(self):
         # реализуйте проверку, что есть форма логина

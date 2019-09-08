@@ -11,3 +11,6 @@ class LoginPageLocators():
     EMAIL_REG = (By.NAME, "registration-email")
     PASSWORD1_REG = (By.NAME, "registration-password1")
     PASSWORD2_REG = (By.NAME, "registration-password2")
+
+class ProductPageLocators():
+    ADD_TO_BASKET = (By.XPATH, "//button[text()='Add to basket']")
