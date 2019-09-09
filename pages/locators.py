@@ -19,3 +19,8 @@ class ProductPageLocators():
     PRODUCT_NAME = (By.XPATH, "//div[@class='col-sm-6 product_main']/h1")
     PRODUCT_NAME_NOTIFICATION = (By.XPATH, "(//div[@class='alertinner ']/strong)[1]")
     PRODUCT_PRICE_NOTIFICATION = (By.XPATH, "(//div[@class='alertinner ']//strong)[3]")
+    SUCCESS_MESSAGE = (By.XPATH, "//p[contains(text(), 'Your basket total is now')]")
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
