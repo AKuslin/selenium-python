@@ -1,9 +1,8 @@
 from .base_page import BasePage
 from .locators import ProductPageLocators
-from .login_page import LoginPage
 from selenium.common.exceptions import NoAlertPresentException
 import math
-import time
+
 
 class ProductPage(BasePage):
     def click_add_to_basket(self):
